@@ -37,8 +37,11 @@ const ROLES = [
 // SECTION: About Me
 const ABOUT = {
   bio: [
-    "I'm a junior studying Computer Science at San Jose State University. I enjoy building things — whether that's a small web app, a script that saves me time, or a project I can share with people. I'm still learning a lot, and that's honestly the part I like most.",
-    "Outside of class I like tinkering with side projects, picking up new tools, and working on things I actually care about. I'm looking for opportunities where I can contribute, pick up real-world experience, and keep growing alongside people who care about what they build.",
+    "While pursuing a bachelor’s degree in computer science at San José State University, I gain strong foundation in software development, problem-solving, and systems thinking.",
+    "Beyond the classroom, my experience in part-time roles and clubs has strengthened my teamwork, communication, and resilience.",
+    "Balancing work and academics has taught me how to adapt quickly, stay organized, and perform effectively in fast-paced environments.",
+    "I am very passionate about continuously learn about computer science and also in the professional and interpersonal skills that help turn technical knowledge into real-world impact.",
+    "I’m actively seeking opportunities where I can grow as a developer, contribute to meaningful projects, and collaborate with others who are driven to create change for the better."
   ],
   stats: [
     { num: "San Jose State University", label: "College" },
@@ -88,11 +91,11 @@ const EXPERIENCE = [
 // SECTION: Projects
 const PROJECTS = [
   {
-    title: "test",
-    desc: "test",
-    tags: ["React", "Node.js", "Express"],
-    github: "#",
-    live: "#",
+    title: "PCSeekers",
+    desc: "A web application to help users find deals on computer parts across multiple retailers, built with Next.JS and FastAPI.",
+    tags: ["Next.js", "FastAPI", "Vercel", "Python", "JavaScript", "Web Scraping"],
+    github: "https://github.com/yiswangdev/pc-deals-website",
+    live: "https://pc-seekers.vercel.app/",
   },
 ];
 
