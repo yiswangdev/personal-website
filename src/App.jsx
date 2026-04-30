@@ -81,9 +81,10 @@ const EXPERIENCE = [
     company: "Software and Computer Engineering Society (SJSU)",
     date: "Dec 2025 – Feb 2026",
     bullets: [
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.",
-      "Ut labore et dolore magna aliqua enim ad minim veniam quis nostrud exercitation.",
-      "Duis aute irure dolor reprehenderit voluptate velit esse cillum dolore fugiat.",
+      "Built a real-time stock analysis platform with React and Express.js, integrating FinnHub API for live market data.",
+      "Collaborated with developers to design and log market data in a clean formatted table.",
+      "Improved maintainability and performance by applying clean architecture principles and consistent coding practices.",
+      "Shipped a redesigned UI with data visualizations, boosting engagement by 25% and session time from 2 to 5 minutes.",
     ],
   },
 ];
@@ -454,23 +455,26 @@ function Skills() {
         <div className="section-label">02 // Expertise</div>
         <h2 className="section-title">My <span>Skills</span></h2>
 
-        {/* SECTION: Skills Data */}
         <div className="skills-grid">
           {SKILLS.map((cat, ci) => (
             <div
-              className="skill-category"
+              className="skill-column"
               key={cat.category}
-              style={{ opacity: visible ? 1 : 0, transform: visible ? "none" : "translateY(20px)", transition: `all 0.5s ${ci * 0.1}s ease` }}
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? "none" : "translateY(20px)",
+                transition: `all 0.5s ${ci * 0.1}s ease`,
+              }}
             >
-              <div className="skill-cat-title">
+              <div className="skill-col-header">
                 <span className="skill-cat-icon">{cat.icon}</span>
-                {cat.category}
+                <span className="skill-col-title">{cat.category}</span>
               </div>
-              <div className="skill-pills">
+              <ul className="skill-list">
                 {cat.skills?.map((skill) => (
-                  <span className="skill-pill" key={skill}>{skill}</span>
+                  <li className="skill-item" key={skill}>{skill}</li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
