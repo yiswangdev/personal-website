@@ -7,7 +7,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
 
-
 // ─────────────────────────────────────────────
 //  DATA  — edit all of these
 // ─────────────────────────────────────────────
@@ -22,7 +21,7 @@ const INFO = {
   email: "eric.wang02@sjsu.edu",
   github: "https://github.com/yiswangdev",
   linkedin: "https://www.linkedin.com/in/yisongw/",
-  resume: "#",
+  resume: "/resume.pdf",
 };
 
 // SECTION: Typewriter roles
@@ -382,8 +381,11 @@ function Hero() {
 
         <div className="hero-cta fade-up" style={{ animationDelay: "0.65s", opacity: 0 }}>
           {/* SECTION: CTA Buttons */}
-          <a className="btn btn-primary" href={INFO.resume}>
-            Download Resume
+          <a className="btn btn-primary" href={INFO.resume} target="_blank" rel="noreferrer">
+            View Resume
+          </a>
+          <a className="btn btn-outline" href={INFO.resume} download="Yisong_Wang_Resume.pdf">
+            Download ↓
           </a>
           <button className="btn btn-outline" onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}>
             Get In Touch ↓
