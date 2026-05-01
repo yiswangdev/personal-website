@@ -11,7 +11,7 @@
   --gold-mid:  #b8860b;
   --amber:     #c49a00;
   --cream:     #e8d5a0;
-  --muted:     #7a8a72;
+  --muted:     #4a7634;
   --board:     #111a11;
   --border:    #1e2e1a;
   --border2:   #2a3e24;
@@ -309,6 +309,7 @@ body::after {
   border-radius: 3px; text-align: center;
   background: var(--bg2); position: relative; overflow: hidden;
   transition: border-color 0.3s, transform 0.3s;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
 .stat-box::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
@@ -320,6 +321,7 @@ body::after {
 .stat-num {
   font-family: var(--font-head); font-size: 26px; font-weight: 700;
   color: var(--gold); text-shadow: var(--glow-g); letter-spacing: 1px;
+  
 }
 .stat-label {
   font-family: var(--font-mono);
@@ -370,14 +372,14 @@ body::after {
   gap: 8px;
 }
 
-.skill-cat-icon { font-size: 15px; opacity: 0.85; }
+.skill-cat-icon { font-size: 24px; opacity: 0.85; }
 
 .skill-list {
   list-style: none;
   padding: 0; margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 .skill-item {
@@ -394,7 +396,7 @@ body::after {
 
 .skill-item::before {
   content: '▸';
-  font-size: 9px;
+  font-size: 24px;
   color: var(--gold-mid);
   opacity: 0;
   transition: opacity 0.2s;
@@ -461,7 +463,7 @@ body::after {
   font-family: var(--font-mono);
   font-size: 10px; letter-spacing: 2px;
   color: var(--amber); text-transform: uppercase;
-  background: rgba(196,154,0,0.08); border: 1px solid rgba(196,154,0,0.2);
+  background: rgba(196,154,0,0.08); border: px solid rgba(196,154,0,0.2);
   padding: 4px 10px; border-radius: 2px;
 }
 .exp-company { font-family: var(--font-mono); font-size: 12px; color: var(--gold); margin-bottom: 16px; }
@@ -500,8 +502,8 @@ body::after {
 .project-card:hover::before { border-color: var(--gold-mid); width: 80px; height: 80px; }
 .project-card:hover::after { opacity: 1; }
 .project-num {
-  font-family: var(--font-mono); font-size: 10px;
-  color: var(--border2); letter-spacing: 3px; margin-bottom: 14px;
+  font-family: var(--font-mono); font-size: 10px; color: var(--gold); text-shadow: var(--glow-g);
+  color: var(--border1); letter-spacing: 3px; margin-bottom: 14px;
 }
 .project-title {
   font-family: var(--font-head); font-size: 18px; font-weight: 600;

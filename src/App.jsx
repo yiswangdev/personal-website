@@ -69,7 +69,7 @@ const SKILLS = [
   {
     category: "Other",
     icon: "🔗",
-    skills: ["Git", "FIgma", "Data Structures", "Algorithms"],
+    skills: ["Git", "Figma", "Data Structures", "Algorithms"],
   },
 ];
 
