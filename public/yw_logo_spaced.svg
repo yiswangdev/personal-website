@@ -1,0 +1,26 @@
+<svg width="100%" viewBox="180 90 320 320" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>YW logo adobe style black and gold</title>
+  <desc>Bold YW letters in gold on a black rounded square, Adobe app icon style, letters contained within tile.</desc>
+
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d060"/>
+      <stop offset="55%" stop-color="#c9920a"/>
+      <stop offset="100%" stop-color="#7a5000"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="130%" y2="130%">
+      <stop offset="0%" stop-color="#1c1400"/>
+      <stop offset="100%" stop-color="#060606"/>
+    </linearGradient>
+    <clipPath id="tile">
+      <rect x="190" y="100" width="300" height="300" rx="54"/>
+    </clipPath>
+  </defs>
+
+  <rect x="190" y="100" width="300" height="300" rx="54" fill="url(#bg)"/>
+
+  <text x="340" y="298" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="142" fill="url(#gold)" letter-spacing="10" clip-path="url(#tile)">YW</text>
+
+  <rect x="190" y="100" width="300" height="300" rx="54" fill="none" stroke="#c9920a" stroke-width="2" opacity="0.6"/>
+  <rect x="193" y="103" width="294" height="294" rx="52" fill="none" stroke="#f5d060" stroke-width="1" opacity="0.15"/>
+</svg>
