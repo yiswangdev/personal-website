@@ -385,7 +385,7 @@ function Hero() {
             View Resume
           </a>
           <a className="btn btn-outline" href={INFO.resume} download="Yisong_Wang_Resume.pdf">
-            Download ↓
+            Download Resume ↓
           </a>
           <button className="btn btn-outline" onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}>
             Get In Touch ↓
