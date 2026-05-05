@@ -92,10 +92,17 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     title: "PCSeekers",
-    desc: "A web application to help users find deals on computer parts across multiple retailers, built with Next.JS and FastAPI.",
+    desc: "A web application to help users find deals on computer parts across multiple retailers.",
     tags: ["Next.js", "FastAPI", "Vercel", "Python", "JavaScript", "Web Scraping"],
     github: "https://github.com/yiswangdev/pc-deals-website",
     live: "https://pc-seekers.vercel.app/",
+  },
+  {
+    title: "CodeSentinel",
+    desc: "An AI-powered code review assistant that provides real-time feedback and suggestions to developers on their code quality, security, and best practices.",
+    tags: ["Next.js", "FastAPI", "Vercel", "Python", "JavaScript", "Langchain"],
+    github: "https://github.com/Steve-Dusty/codesentinel",
+    live: "https://devpost.com/software/codesentinel-73qwt4",
   },
 ];
 
