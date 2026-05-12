@@ -419,7 +419,7 @@ function About() {
           {/* SECTION: Profile Photo — replace emoji with your photo */}
           <div className="about-photo-wrap" style={{ opacity: visible ? 1 : 0, transform: visible ? "none" : "translateX(-20px)", transition: "all 0.7s ease" }}>
             <div className="about-photo-border floating">
-              <div className="about-photo">👤</div>
+              <img src="eric_pfp1.jpg" alt="Your Name" className="about-photo" translate="100" />
               {/* Replace ↑ with: <img src="your-photo.jpg" alt="Your Name" className="about-photo" /> */}
               <div className="about-photo-corner tl" />
               <div className="about-photo-corner tr" />

@@ -268,11 +268,14 @@ body::after {
   display: grid; grid-template-columns: 1fr 1.6fr;
   gap: 70px; align-items: center;
 }
-.about-photo-wrap { position: relative; }
+.about-photo-wrap {
+  position: relative;
+}
 .about-photo-border {
   position: relative; width: 280px; height: 280px;
   border-radius: 4px; margin: 0 auto;
 }
+
 .about-photo-border::before {
   content: ''; position: absolute;
   inset: -1px; border-radius: 5px;
@@ -284,9 +287,8 @@ body::after {
   width: 100%; height: 100%;
   border-radius: 4px;
   object-fit: cover;
+  object-position: center 35%;
   background: var(--bg3);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 60px;
   border: 1px solid var(--border2);
 }
 .about-photo-corner {
