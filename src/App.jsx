@@ -1,15 +1,5 @@
-// ============================================================
-//  PORTFOLIO.JSX  — Gold Circuit Board Theme
-//  Single-page dark portfolio with PCB / gold aesthetic
-//  Edit each section labeled with // SECTION: <Name>
-// ============================================================
-
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
-
-// ─────────────────────────────────────────────
-//  DATA  — edit all of these
-// ─────────────────────────────────────────────
 
 // SECTION: Personal Info
 const INFO = {
@@ -92,14 +82,21 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     title: "PCSeekers",
-    desc: "A web application to help users find deals on computer parts across multiple retailers.",
+    desc: "A web application that helps users find the best deals on computer parts from multiple retailers. Features include web scraping for real-time pricing, search and filter options, and deal comparisons across platforms.",
     tags: ["Next.js", "FastAPI", "Vercel", "Python", "JavaScript", "Web Scraping"],
     github: "https://github.com/yiswangdev/pc-deals-website",
     live: "https://pc-seekers.vercel.app/",
   },
   {
+    title: "SecondLife Finder",
+    desc: "An app that helps users find nearby thrift stores, donation centers, and exchange options to reduce textile waste and promote sustainable shopping. Features include search, interactive map, categorized listings with ratings, filters, and AI summaries.",
+    tags: ["React", "Vite", "Express", "Google Maps API", "Gemini AI", "Vercel"],
+    github: "https://github.com/yiswangdev/SecondLife-Finder",
+    live: "https://shipyardhq.tech/projects/246f5ec7-267d-41a6-ac05-aed80d3ac842",
+  },
+  {
     title: "CodeSentinel",
-    desc: "An AI-powered code review assistant that provides real-time feedback and suggestions to developers on their code quality, security, and best practices.",
+    desc: "An AI-powered code review assistant that provides real-time feedback and suggestions to developers on their code quality, security, and best practices. Features include automated code analysis, security vulnerability detection, and best practice recommendations using Langchain.",
     tags: ["Next.js", "FastAPI", "Vercel", "Python", "JavaScript", "Langchain"],
     github: "https://github.com/Steve-Dusty/codesentinel",
     live: "https://devpost.com/software/codesentinel-73qwt4",
@@ -116,9 +113,7 @@ const EDUCATION = {
   courses: ["Data Structures", "Algorithms", "Discrete Math", "Calculus"],
 };
 
-// ─────────────────────────────────────────────
-//  CIRCUIT BOARD PARTICLES
-// ─────────────────────────────────────────────
+// CIRCUIT BOARD PARTICLES
 function Particles() {
   const dots = Array.from({ length: 14 }, (_, i) => ({
     id: i,
@@ -129,7 +124,6 @@ function Particles() {
     opacity: 0.15 + Math.random() * 0.35,
   }));
 
-  // gold / amber only — no magenta / cyan
   const colors = ["var(--gold)", "var(--amber)", "var(--gold-mid)", "#e8d5a0"];
 
   return (
@@ -155,16 +149,13 @@ function Particles() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  CIRCUIT BOARD SVG OVERLAY (hero bg)
-// ─────────────────────────────────────────────
+// CIRCUIT BOARD SVG OVERLAY (hero bg)
 function CircuitOverlay() {
   return (
     <svg
       style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: 0.12, pointerEvents: "none", zIndex: 1 }}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Non-parallel traces routed with L-bends */}
       <path d="M0 180 L120 180 L120 80 L320 80" fill="none" stroke="#d4a017" strokeWidth="1"/>
       <path d="M0 320 L80 320 L80 240 L220 240 L220 160 L400 160" fill="none" stroke="#b8860b" strokeWidth="1.2"/>
       <path d="M100% 100 L-80 100 L-80 260 L-240 260" fill="none" stroke="#c49a00" strokeWidth="0.8" transform="translate(800,0)"/>
@@ -186,9 +177,7 @@ function CircuitOverlay() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  TYPEWRITER HOOK
-// ─────────────────────────────────────────────
+// TYPEWRITER HOOK
 function useTypewriter(words, speed = 80, pause = 1800) {
   const [display, setDisplay] = useState("");
   const [wordIdx, setWordIdx] = useState(0);
@@ -220,9 +209,7 @@ function useTypewriter(words, speed = 80, pause = 1800) {
   return display;
 }
 
-// ─────────────────────────────────────────────
-//  INTERSECTION OBSERVER HOOK
-// ─────────────────────────────────────────────
+// INTERSECTION OBSERVER HOOK
 function useReveal(threshold = 0.15) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -237,9 +224,7 @@ function useReveal(threshold = 0.15) {
   return [ref, visible];
 }
 
-// ─────────────────────────────────────────────
-//  ICONS
-// ─────────────────────────────────────────────
+// ICONS
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
     <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -265,9 +250,7 @@ const ExternalIcon = () => (
   </svg>
 );
 
-// ─────────────────────────────────────────────
-//  NAV
-// ─────────────────────────────────────────────
+// NAV
 const NAV_LINKS = ["About", "Skills", "Experience", "Projects", "Education", "Contact"];
 
 function Nav() {
@@ -348,15 +331,12 @@ function Nav() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  HERO
-// ─────────────────────────────────────────────
+// HERO
 function Hero() {
   const typed = useTypewriter(ROLES);
 
   return (
     <section id="hero" className="hero">
-      {/* Background orbs — warm gold/amber tones only */}
       <div className="hero-bg-orb" style={{ width: 500, height: 500, top: "5%", left: "55%", background: "rgba(212,160,23,0.06)" }} />
       <div className="hero-bg-orb" style={{ width: 350, height: 350, top: "55%", left: "2%", background: "rgba(196,154,0,0.05)" }} />
       <div className="hero-bg-orb" style={{ width: 280, height: 280, bottom: "10%", right: "8%", background: "rgba(184,134,11,0.04)" }} />
@@ -403,9 +383,7 @@ function Hero() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  ABOUT
-// ─────────────────────────────────────────────
+// ABOUT
 function About() {
   const [ref, visible] = useReveal();
 
@@ -419,7 +397,7 @@ function About() {
           {/* SECTION: Profile Photo — replace emoji with your photo */}
           <div className="about-photo-wrap" style={{ opacity: visible ? 1 : 0, transform: visible ? "none" : "translateX(-20px)", transition: "all 0.7s ease" }}>
             <div className="about-photo-border floating">
-              <img src="eric_pfp1.jpg" alt="Your Name" className="about-photo" translate="100" />
+              <img src="eric_pfp1.jpg" alt="Your Name" className="about-photo" />
               {/* Replace ↑ with: <img src="your-photo.jpg" alt="Your Name" className="about-photo" /> */}
               <div className="about-photo-corner tl" />
               <div className="about-photo-corner tr" />
@@ -448,9 +426,7 @@ function About() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  SKILLS
-// ─────────────────────────────────────────────
+// SKILLS
 function Skills() {
   const [ref, visible] = useReveal();
 
@@ -492,9 +468,7 @@ function Skills() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  EXPERIENCE
-// ─────────────────────────────────────────────
+// EXPERIENCE
 function Experience() {
   const [ref, visible] = useReveal();
 
@@ -531,9 +505,7 @@ function Experience() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  PROJECTS
-// ─────────────────────────────────────────────
+// PROJECTS
 function Projects() {
   const [ref, visible] = useReveal();
 
@@ -586,9 +558,7 @@ function Projects() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  EDUCATION
-// ─────────────────────────────────────────────
+// EDUCATION
 function Education() {
   const [ref, visible] = useReveal();
 
@@ -620,9 +590,7 @@ function Education() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  CONTACT
-// ─────────────────────────────────────────────
+// CONTACT
 function Contact() {
   const [ref, visible] = useReveal();
 
@@ -655,9 +623,6 @@ function Contact() {
   );
 }
 
-// ─────────────────────────────────────────────
-//  ROOT APP
-// ─────────────────────────────────────────────
 export default function Portfolio() {
   // Load fonts on mount
   useEffect(() => {
